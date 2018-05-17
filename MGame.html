@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+        </style>
+        <link rel="stylesheet" href="MGame.css" type="text/css" />
+    </head>
+    <body>
+        <audio id="audioFlip"><source src="Audio/flip.mp3" type="audio/mpeg"></audio>
+        <audio id="audioStart"><source src="Audio/start.mp3" type="audio/mpeg"></audio>
+        <audio id="audioEnd"><source src="Audio/end.mp3" type="audio/mpeg"></audio>
+        <audio id="audioCorrect"><source src="Audio/correct.mp3" type="audio/mpeg"></audio>
+        <table border="0" align="center">
+            <tr>
+                <td width="15px">
+                  <img src="Images/flag.gif" width="120" height="120">  
+                </td>
+              <td width="15px">
+                  <h1>Apple Memory Game</h1>
+              </td>
+              <td>
+                  <img src="Images/flag.gif" width="120" height="120">
+              </td>
+              
+            </tr>
+                 <tr>
+                     <td>
+                         <img onmouseover="Over(this)" onmouseout="Out(this)"src="Images/start.jpg" width="90px" height="90px" border="0" id="startIMG">
+                         <script>
+                             function Over(startIMG)
+                             {
+                                 startIMG.setAttribute("src","Images/start2.jpg");
+                                 
+                             }
+                             function Out(startIMG)
+                             {
+                                 startIMG.setAttribute("src","Images/start.jpg");
+                             }
+                         </script>
+                         <br><br/>
+                         <br><br/>
+                    </td>
+                    <td align="center">
+                        
+                        
+                    <span id="showWin">
+                    <div class="win">
+                    <div class="win-head">
+                       <h2>You Win !</h2>
+                    </div>
+                    <div class="win-body">
+                       <h4>You do that in <span id="Mtime"> 00:00:00 </span> and <span id="Mmoves">0</span> moves !</h4>
+                       <h4>Very good !</h4>
+                     </div>
+                    <div class="win-end">
+                       <h3> Thanks for playing Apple Memory Game !</h3>
+                    </div>
+                    </div>
+                    </span>
+       
+       
+       
+       
+       
+       
+                    <table id="tblBoard" align="center"></table>
+                    </td>
+                    <td >
+                        <br><br/>
+                        <br><br/>
+                        <br><br/>
+                        <br><br/>
+                        <br><br/>
+                        <h2>Time:<span id="timer"> 00:00:00</span></h2>
+                        <h2>Moves:<span id="moves"> 0</span></h2>
+                    </td>
+                </tr>
+       </table>
+       
+       
+       
+       
+        <script type="text/javascript" src="MGame.js"></script>
+    </body>
+</html>
